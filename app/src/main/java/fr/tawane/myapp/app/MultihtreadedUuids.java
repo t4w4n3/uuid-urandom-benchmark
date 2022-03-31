@@ -23,11 +23,11 @@ public class MultihtreadedUuids {
 		return IntStream.rangeClosed(0, 1000000).parallel().mapToObj(e -> UUID.randomUUID()).collect(Collectors.toList());
 	}
 
-	public List<UUID> fromUrandom2() {
-		return IntStream.rangeClosed(0, 1000000).parallel().mapToObj(e -> fromUrandom()).collect(Collectors.toList());
+	public List<UUID> fromUrandom() {
+		return IntStream.rangeClosed(0, 1000000).parallel().mapToObj(e -> generateWithUrandom()).collect(Collectors.toList());
 	}
 
-	public UUID fromUrandom() {
+	public UUID generateWithUrandom() {
 		byte[] randomBytes = new byte[16];
 		nonBlockingSecureRandom.nextBytes(randomBytes);
 		randomBytes[6] &= 0x0f;  /* clear version        */

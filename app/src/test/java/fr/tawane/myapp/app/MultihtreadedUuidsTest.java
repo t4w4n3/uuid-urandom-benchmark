@@ -6,6 +6,6 @@ class MultihtreadedUuidsTest {
 
 	@Test
 	void fromUrandom() {
-		new MultihtreadedUuids().fromUrandom();
+		new MultihtreadedUuids().generateWithUrandom();
 	}
 }

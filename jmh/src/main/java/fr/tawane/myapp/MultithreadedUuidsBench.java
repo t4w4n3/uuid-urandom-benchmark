@@ -10,7 +10,6 @@ import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -35,7 +34,6 @@ public class MultithreadedUuidsBench {
 	@Warmup(iterations = 1)
 	@Benchmark
 	public List<UUID> withUrandom() {
-		return sut.fromUrandom2();
+		return sut.fromUrandom();
 	}
-
 }
