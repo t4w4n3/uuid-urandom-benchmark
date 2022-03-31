@@ -2,7 +2,7 @@
 
 Microbenchmark used to compare /dev/random and /dev/urandom for UUIDs
 
-The benchmark create 1 milion UUIDs in parallel with either /dev/random or /dev/urandom.
+The benchmark create 1 million UUIDs in parallel with either /dev/random or /dev/urandom.
 
 If the blocking from /dev/random is really altering performance, we should see a notable difference.
 
